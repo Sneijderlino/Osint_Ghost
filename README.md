@@ -16,12 +16,6 @@
 <p align="center">
   <img src="/img/Banner.png" alt="Contoh output web_scanner_ghost" width="800"/>
 
-
-
-
-
-
-
 ## 🔎 Ringkasan
 
 _OSINT Ghost Root_ adalah toolkit Python untuk melakukan enumerasi username di berbagai platform sosial media (Twitter, Instagram, TikTok, Facebook, YouTube, Reddit, GitHub, Telegram, LinkedIn).  
@@ -113,7 +107,6 @@ python3 osint_ghost
 # Jika environment menggunakan 'python' sebagai alias
 python osint_ghost
 ```
-
 
 ## Tampilan Awal
 
