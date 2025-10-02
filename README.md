@@ -114,4 +114,4 @@ python osint_ghost
 <p align="center">
   <img src="/img/akhir.png" alt="Contoh output web_scanner_ghost" width="800"/><br>
   <em>Demo akhir: <code><br>Informasi Akun sosmed ditemukan<pentest_output/</code>.</em>
-</p>
+</p># Osint_Ghost
