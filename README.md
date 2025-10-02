@@ -12,18 +12,10 @@
 </p>
 
 ---
-## Tampilan Awal
 
 <p align="center">
-  <img src="/img/awal.png" alt="Contoh output web_scanner_ghost" width="800"/><br>
-  <em>Demo Script Dijalankan: <code><br>Masukan Nama target<pentest_output/</code>.</em>
-</p>
+  <img src="/img/Banner.png" alt="Contoh output web_scanner_ghost" width="800"/>
 
-## Tampilan Akhir
-
-<p align="center">
-  <img src="/img/akhir.png" alt="Contoh output web_scanner_ghost" width="800"/><br>
-  <em>Demo akhir: <code><br>Informasi Akun sosmed ditemukan<pentest_output/</code>.</em></p>
 
 
 
@@ -123,3 +115,15 @@ python osint_ghost
 ```
 
 
+## Tampilan Awal
+
+<p align="center">
+  <img src="/img/awal.png" alt="Contoh output web_scanner_ghost" width="800"/><br>
+  <em>Demo Script Dijalankan: <code><br>Masukan Nama target<pentest_output/</code>.</em>
+</p>
+
+## Tampilan Akhir
+
+<p align="center">
+  <img src="/img/akhir.png" alt="Contoh output web_scanner_ghost" width="800"/><br>
+  <em>Demo akhir: <code><br>Informasi Akun sosmed ditemukan<pentest_output/</code>.</em></p>
