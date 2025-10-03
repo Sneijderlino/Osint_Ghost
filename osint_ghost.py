@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-                                    
-"""
-OSINT Ghost Root - No Proxy Version
-
-- Animasi asli dipertahankan
-- Clear screen otomatis saat start
-- Deteksi status akun: active, private, inactive, not_found, error
-- Generate variasi username                                - Simpan hasil scan ke JSON                                - Tanpa proxy
-"""
-
 import aiohttp
 import asyncio
 import json
