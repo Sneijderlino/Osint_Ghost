@@ -22,7 +22,7 @@ from aiohttp import ClientTimeout
 from colorama import Fore, Style, init                     
 init(autoreset=True)
 
-# ===================== SITES =====================
+
 SITES = OrderedDict({
     "Twitter":   {"url": "https://twitter.com/{username}",
                   "check": lambda t, u: 'data-testid="UserName"' in t},
@@ -46,7 +46,7 @@ SITES = OrderedDict({
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; osint-ghost-root/2.1)"}
 
-# ===================== Animasi Dasar =====================
+
 def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 
@@ -74,7 +74,7 @@ def reverse_typing(text, delay=0.05):
         time.sleep(delay)
     print()
 
-# ===================== Intro =====================
+
 def intro_loading():
     clear_screen()
     typing_effect(">>> Selamat datang di Tools OSINT Ghost_Root", 0.03, Fore.RED)
@@ -83,7 +83,7 @@ def intro_loading():
     typing_effect("✔ System Ready...", 0.03, Fore.GREEN)
     reverse_typing(">>> Welcome, Ghost Operator...")
 
-# ===================== Banner =====================
+
 from colorama import init, Fore, Style
 init(autoreset=True)
 
@@ -106,7 +106,7 @@ def banner():
 if __name__ == "_main_":
     banner()
 
-# ===================== Username Generator =====================
+
 def generate_usernames(name):
     base = name.strip().replace(" ", "")
     words = name.strip().split()
@@ -145,7 +145,7 @@ def generate_usernames(name):
     combos = {c for c in combos if len(c) >= 3}
     return sorted(combos)
 
-# ===================== Ekstrak Input =====================
+
 def parse_input_name(raw_input):
     parts = [p.strip() for p in re.split(r"[,\s]+", raw_input) if p.strip()]
     name_parts, usernames = [], []
@@ -156,7 +156,7 @@ def parse_input_name(raw_input):
             name_parts.append(p)
     return " ".join(name_parts), usernames
 
-# ===================== Cek Akun =====================
+
 async def check_site(session, site, username, info):
     url = info["url"].format(username=username)
     try:
@@ -197,7 +197,6 @@ async def check_site(session, site, username, info):
                 "status_account": "error", "username": username,
                 "status": None, "error": str(exc)}
 
-# ===================== Animasi Login Scanning =====================
 async def scary_login_animation(stop_event):
     messages = [
         ">>> Initiating deep login sequence...",
@@ -214,7 +213,7 @@ async def scary_login_animation(stop_event):
             glitch_text(msg)
             await asyncio.sleep(random.uniform(0.5, 1.0))
 
-# ===================== Progress Bar =====================
+
 def hacker_progress_bar(total, prefix=">>> Executing scan"):
     bar_length = 40
     for i in range(total + 1):
@@ -229,7 +228,7 @@ def hacker_progress_bar(total, prefix=">>> Executing scan"):
     time.sleep(0.3)
     typing_effect("✔ Progress bar completed - entering critical phase", 0.02, Fore.GREEN)
 
-# ===================== Laporan =====================
+
 def print_grouped_report(results):
     found_by_site = defaultdict(list)
     for r in results:
@@ -267,7 +266,7 @@ def print_grouped_report(results):
         print("Tidak ada akun yang terdeteksi.")
     print()
 
-# ===================== Save JSON =====================
+
 def save_results(results, name):
     os.makedirs("results", exist_ok=True)
     safe_name = name.replace(" ", "_") if name else "target"
@@ -276,7 +275,7 @@ def save_results(results, name):
         json.dump(results, f, indent=2, ensure_ascii=False)
     print(Fore.GREEN + f"💾 Hasil lengkap tersimpan di: {Fore.CYAN}{filename}" + Style.RESET_ALL)
 
-# ===================== Main =====================
+
 async def main():
     intro_loading()
     banner()
@@ -325,7 +324,7 @@ async def main():
     save_results(results, name if name else raw)
     print_grouped_report(results)
 
-# ===================== Run =====================
+
 if __name__ == "__main__":
     try:
         asyncio.run(main())
