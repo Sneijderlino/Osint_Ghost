@@ -1,21 +1,21 @@
-# Python
+
 _pycache_/
 *.py[cod]
 *.so
 
-# Environments
+
 .env
 .venv/
 venv/
 
-# Editor
+
 .vscode/
 .idea/
 
-# Results and logs
+
 results/
 *.log
 
-# OS
+
 .DS_Store
 Thumbs.db
